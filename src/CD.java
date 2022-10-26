@@ -1,4 +1,4 @@
-public class CD extends Midia{
+public class CD extends Midia {
     private String artista;
     private int quantidadeFaixas;
 
@@ -6,7 +6,7 @@ public class CD extends Midia{
 
 
     public CD(String codigo, Double preco, String nome, String artista, int quantidadeFaixas) {
-        super(codigo, preco, nome);
+        super (codigo, preco, nome);
         this.artista = artista;
         this.quantidadeFaixas = quantidadeFaixas;
     }
@@ -26,4 +26,20 @@ public class CD extends Midia{
     public void setQuantidadeFaixas(int quantidadeFaixas) {
         this.quantidadeFaixas = quantidadeFaixas;
     }
+
+
+
+    @Override
+    public void darPlay() {
+        System.out.println ("Primeira Faixa tocando");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "CD{" +
+                "artista='" + artista + '\'' +
+                ", quantidadeFaixas=" + quantidadeFaixas +
+                '}';
+    }
+
 }
