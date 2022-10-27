@@ -2,8 +2,12 @@ public class CD extends Midia {
     private String artista;
     private int quantidadeFaixas;
 
-    //darPlay()
 
+    @Override
+    public void darPlay() {
+
+        System.out.println("Primeira faixa tocando");
+    }
 
     public CD(String codigo, Double preco, String nome, String artista, int quantidadeFaixas) {
         super (codigo, preco, nome);
@@ -28,16 +32,10 @@ public class CD extends Midia {
     }
 
 
-
-    @Override
-    public void darPlay() {
-        System.out.println ("Primeira Faixa tocando");
-    }
-
     @Override
     public String toString() {
-        return super.toString() + "CD{" +
-                "artista='" + artista + '\'' +
+        return  "CD: " + super.toString() +
+                ", artista='" + artista + '\'' +
                 ", quantidadeFaixas=" + quantidadeFaixas +
                 '}';
     }

@@ -10,12 +10,12 @@ public class DoacaoMidia {
 
         midia.darPlay();
 
+        DVD dvd3 = new DVD("333", 15.0, "Click", "Inglês", true, "Portugues");
 
+        assistirFilme(dvd3);
 
 }
-
         public static Midia pegarMidiaAleatoria() {
-
 
         CD cd1 = new CD("123", 10.0, "CD1", "Artista mt fodinha", 10);
 
@@ -30,30 +30,28 @@ public class DoacaoMidia {
         int valorAleatorio = gerador.nextInt(4);
 
         switch (valorAleatorio) {
-            case 0:
-                return cd1;
-            case 1:
-                return cd2;
-            case 2:
-                return dvd1;
-            case 3:
-                return dvd2;
-            default:
-                return null;
+            case 0: return cd1;
+            case 1: return cd2;
+            case 2: return dvd1;
+            case 3: return dvd2;
+            default: return null;
 
         }
 
     }
 
+    public static void assistirFilme(DVD dvd){
+        dvd.darPlay();
+        dvd.legenda(dvd.isLigaLegenda());
+        dvd.legenda(dvd.isLigaLegenda(), dvd.getIdioma());
+    }
 
 
+    //pegarMidiaAleatoria() que devolve uma midia já criada na biblioteca aleatória --- ok
 
+    //darPlay() que chama o método darPlay() da midia --- ok
 
-    //pegarMidiaAleatoria() que devolve uma midia já criada na biblioteca aleatória
+    //assisitirFilme(Dvd dvd) e chamar os dois métodos de legenda --- ok
 
-    //darPlay() que chama o método darPlay() da midia
-
-    //assisitirFilme(Dvd dvd) e chamar os dois métodos de legenda
-
-    //main deve pegar uma midia aleatoria e dar o play
+    //main deve pegar uma midia aleatoria e dar o play --- ok
 }

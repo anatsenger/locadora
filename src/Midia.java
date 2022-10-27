@@ -3,16 +3,11 @@ public class Midia {
     private Double preco;
     private String nome;
 
-
-
     public Midia(String codigo, Double preco, String nome) {
         this.codigo = codigo;
         this.preco = preco;
         this.nome = nome;
     }
-
-
-
 
     public String getCodigo() {
         return codigo;
@@ -38,20 +33,13 @@ public class Midia {
         this.nome = nome;
     }
 
-
-    public void darPlay(){
-        System.out.println("Play");
+    public void darPlay() {
+        System.out.println("Midia tocando");
     }
-
     @Override
     public String toString() {
-        return "Midia{" +
-                "codigo='" + codigo + '\'' +
-                ", preco=" + preco +
-                ", nome='" + nome + '\'' +
-                '}';
+        return "Codigo='" + codigo + '\'' +
+                ", Preço=" + preco +
+                ", Nome='" + nome + '\'';
     }
-
-
-
 }
